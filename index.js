@@ -10,7 +10,7 @@ const port = 3000;
 
 // Configuración de multer para manejar la carga de archivos CSV
 const upload = multer({ dest: 'uploads/' });
-
+    
 // Verifica si la cabecera es correcta
 const validateHeaders = (req, res, next) => {
   const headerValue = req.headers['asdasdasd'];
