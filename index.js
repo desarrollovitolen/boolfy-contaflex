@@ -13,7 +13,7 @@ const upload = multer({ dest: 'uploads/' });
     
 // Verifica si la cabecera es correcta
 const validateHeaders = (req, res, next) => {
-    const headerValue = req.headers['SDm^rJ!1CI*NFDpO^4V*V2y96ujBwXDtK1pmyxpA2b'];
+    const headerValue = req.headers['Autorized-Token'];
     if (headerValue && headerValue === 'rfCXxVU52RTnqBl4ggvtWmaCbYms&i%D@8napV5QTu') {
         next(); 
     } else {
