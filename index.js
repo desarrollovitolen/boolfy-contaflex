@@ -13,8 +13,8 @@ const upload = multer({ dest: 'uploads/' });
     
 // Verifica si la cabecera es correcta
 const validateHeaders = (req, res, next) => {
-    const headerValue = req.headers['Autorized-Token'];
-    if (headerValue && headerValue === 'rfCXxVU52RTnqBl4ggvtWmaCbYms&i%D@8napV5QTu') {
+    const headerValue = req.headers['asdasd'];
+    if (headerValue && headerValue === 'asdasd') {
         next(); 
     } else {
         res.status(400).json({ error: 'Cabecera inválida' });
