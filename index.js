@@ -54,6 +54,11 @@ app.post('/upload-csv', validateHeaders, upload.single('csvFile'), async (req, r
                 secure: false, // Si usas FTP o FTPS, ajusta esto según sea necesario
             });
 
+            client.ftp.timeout = 30000; 
+
+           
+            client.ftp.usePassiveMode = true;
+
             // Subir el archivo al servidor FTP
             await client.uploadFrom(outputFilePath, '/home/jorge/files_to_test_boolfy/result.csv');
             console.log('Archivo enviado exitosamente');
