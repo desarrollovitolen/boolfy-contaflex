@@ -1,0 +1,4 @@
+
+
+curl -T last -u vitoweb:ps5ty15se36 ftp://132.132.132.132/etiquetas/boolfy/
+

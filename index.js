@@ -46,14 +46,17 @@ app.post('/upload-csv', validateHeaders, upload.single('csvFile'), async (req, r
         client.ftp.verbose = true;  // Habilita los logs detallados para debug
 
         try {
-
+            console.log("Intentando conectarse..")
             await client.access({
                 host: '132.1.132.132',
                 user: 'vitoweb',
                 password: 'ps5ty15se36',
+                dataMode: 'PASV', 
+                usePassiveMode: true, 
                 secure: false, // Si usas FTP o FTPS, ajusta esto según sea necesario
             });
             
+            console.log("CONECTADO..")
 
             client.ftp.timeout = 30000; 
 
