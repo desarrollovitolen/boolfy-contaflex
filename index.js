@@ -62,7 +62,7 @@ app.post('/upload-csv', validateHeaders, upload.single('csvFile'), async (req, r
 
            
             client.ftp.usePassiveMode = true;
-            const path_to_send = '/etiquetas/boolfy/result.csv'
+            const path_to_send = 'etiquetas/boolfy/result.csv'
             console.log("Intentando enviar a ", path_to_send)
             // Subir el archivo al servidor FTP
             await client.uploadFrom(outputFilePath, path_to_send);
