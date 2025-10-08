@@ -7,7 +7,7 @@ const csv = require('csv-parser');
 const ftp = require('basic-ftp');  // Importar la librería FTP
 
 const app = express();
-const port = 3000;
+const port = 3001;
 
 // Configuración de multer para manejar la carga de archivos CSV
 const upload = multer({ dest: 'uploads/' });
