@@ -48,7 +48,7 @@ app.post('/upload-csv', validateHeaders, upload.single('csvFile'), async (req, r
         try {
             console.log("Intentando conectarse..")
             await client.access({
-                host: '132.1.132.132',
+                host: '132.132.132.132',
                 user: 'vitoweb',
                 password: 'ps5ty15se36',
                 dataMode: 'PASV', 
