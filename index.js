@@ -53,6 +53,7 @@ app.post('/upload-csv', validateHeaders, upload.single('csvFile'), async (req, r
                 password: 'ps5ty15se36',
                 secure: false, // Si usas FTP o FTPS, ajusta esto según sea necesario
             });
+            
 
             client.ftp.timeout = 30000; 
 
@@ -60,7 +61,7 @@ app.post('/upload-csv', validateHeaders, upload.single('csvFile'), async (req, r
             client.ftp.usePassiveMode = true;
 
             // Subir el archivo al servidor FTP
-            await client.uploadFrom(outputFilePath, '/home/jorge/files_to_test_boolfy/result.csv');
+            await client.uploadFrom(outputFilePath, '/etiquetas/boolfy/result.csv');
             console.log('Archivo enviado exitosamente');
 
             res.status(200).json({ message: 'Archivo procesado y enviado exitosamente' });
