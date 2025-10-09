@@ -80,7 +80,7 @@ app.post('/upload-csv', validateHeaders, upload.single('csvFile'), async (req, r
             client.ftp.usePassiveMode = true;
             
             // 3. USAR EL NOMBRE DE ARCHIVO EN LA RUTA DE DESTINO FTP
-            const path_to_send = `etiquetas/boolfy/${finalFileName}` // MODIFICACIÓN
+            const path_to_send = `etiquetas/boolfy/boolfy/${finalFileName}` // MODIFICACIÓN
             
             console.log("Intentando enviar a ", path_to_send)
             // Subir el archivo al servidor FTP
